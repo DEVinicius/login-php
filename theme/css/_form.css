@@ -1,0 +1,69 @@
+:root{
+    --primary: #ebecf0;
+    --form: #c3c3c3;
+    --shadow: #b3b3b3;
+    --white: #f3f3f3;
+    --green: #32c809;
+}
+
+
+form{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 90px 10px;
+    grid-gap: 15px;
+}
+
+input{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#btn{
+    height: 5vh;
+    box-shadow: 5px 10px var(--shadow);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 20px;
+}
+
+#btn_sign_up{
+    margin: 20px;
+    height: 5vh;
+    box-shadow: 5px 10px var(--shadow);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.sign_up{
+    background-color: yellow;
+}
+
+.send{
+    background-color: var(--green);
+}
+
+form #email input, form #password input, form #name input{
+    border: 0 none;
+    box-shadow: 5px 5px var(--shadow);
+    height: 4vh;
+    width: 15vw;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+form #email label{
+    padding-bottom: 10px;
+}
+
+input:focus{
+    border: 0 none;
+    outline: 0;
+}

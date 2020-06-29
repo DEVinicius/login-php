@@ -1,0 +1,24 @@
+{
+    "name": "sistema-login-iniciante",
+    "description": "Projeto desenvolvido para aumentar meus conhecimentos em desenvolvimento de um sistema de cadastro",
+    "authors": [
+        {
+            "name": "Vinicius Pereira de Oliveira",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require": {
+        "ext-pdo": "*",
+        "php":"^7.3",
+        "coffeecode/router": "^1.0",
+        "league/plates": "^3.3"
+    }
+}
