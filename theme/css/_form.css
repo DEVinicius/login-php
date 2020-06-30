@@ -69,3 +69,8 @@ input:focus{
     border: 0 none;
     outline: 0;
 }
+
+form div #cadastro a{
+    padding: 10px;
+    font-size: 24px;
+}

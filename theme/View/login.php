@@ -20,12 +20,6 @@
     
 
     <div id="cadastro">
-        <a href="<?= url("signUp")?>"></a>
-    </div>
-  
-    <a href="<?= url("signUp")?>"  title="sign_up"><button id="btn">
-        Cadastrar
-    </button></a>
-    
-    
+        <a href="<?= url("signUp")?>">Cadastrar</a>
+    </div>  
 </form>
