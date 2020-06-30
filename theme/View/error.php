@@ -4,5 +4,7 @@
     ]);
 ?>
 
-<h1>Erro <?= $this->e($erro);?></h1>
-<button><a href="<?= url()?>" title="Voltar">&larr;</a></button>
+<div class="error">
+    <h1>Erro <?= $this->e($erro);?></h1>
+    <button id="btn"><a href="<?= url()?>" title="Voltar">&larr; Voltar</a></button>
+</div>

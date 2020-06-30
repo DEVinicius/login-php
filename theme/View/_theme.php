@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="main_title">
-        <a href="<?php url();?>"><h1>Login Treinamento</h1></a>
+        <a href="<?= url();?>"><h1>Login Treinamento</h1></a>
     </div>
 
     <div class="form">

@@ -4,6 +4,7 @@
     ]);
 ?>
 
+<h1>Login</h1>
 <form action="#" method="post">
     <div id="email">
         <label for="email">E-mail</label>
@@ -16,5 +17,15 @@
     </div>
 
     <input type="submit" id= "btn" class="send" value="Enviar">
-    <a href="<?= url("signUp")?>"  title="sign_up">Cadastrar</a>
+    
+
+    <div id="cadastro">
+        <a href="<?= url("signUp")?>"></a>
+    </div>
+  
+    <a href="<?= url("signUp")?>"  title="sign_up"><button id="btn">
+        Cadastrar
+    </button></a>
+    
+    
 </form>

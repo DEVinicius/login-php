@@ -10,7 +10,7 @@ class WebController{
     
     public function __construct()
     {
-        $this->view = new Engine(__DIR__."/../../theme/View/", "php");
+        $this->view = new Engine(__DIR__."/../../theme/View/");
     }
 
     public function index(): void{

@@ -17,6 +17,7 @@ body{
     justify-content: center;
 }
 
+
 .main_title{
     grid-area: title;
     display: flex;
@@ -49,3 +50,6 @@ body{
     justify-content: center;
 }
 
+.error{
+    display: block;
+}
