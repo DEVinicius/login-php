@@ -4,7 +4,7 @@
     ]);
 ?>
 
-<form action="<?= url("/signUp")?>" method="post">
+<form action="<?= url("signUp")?>" method="post">
     <div id="name">
         <label for="name">Name</label>
         <input type="text" name="name">

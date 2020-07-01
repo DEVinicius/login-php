@@ -3,6 +3,7 @@
 namespace Source\App;
 
 use League\Plates\Engine;
+use Source\Models\Web;
 
 class WebController{
 
@@ -34,6 +35,10 @@ class WebController{
 
     //Funções de interação com a Model
     public function create($data){
-        var_dump($data);
+        $web = new Web();
+        //criptografar a senha
+        $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
+        $web->setUser($data['name'], $data['email'], $data['password']);
+        $web->create();
     }
 }
