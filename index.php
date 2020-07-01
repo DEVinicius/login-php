@@ -12,7 +12,7 @@ $router->group(null);
 
 $router->get("/", "WebController:index");
 $router->get("/signUp", "WebController:signUp");
-$router->get("/", "WebController:login");
+$router->post("/", "WebController:login");
 $router->post("/sign_up", "WebContoller:create");
 
 // Rotas de erro

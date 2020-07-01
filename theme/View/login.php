@@ -4,7 +4,6 @@
     ]);
 ?>
 
-<h1>Login</h1>
 <form action="#" method="post">
     <div id="email">
         <label for="email">E-mail</label>

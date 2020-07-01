@@ -31,4 +31,6 @@ class WebController{
             "title" => "Cadastro"
         ]);
     }
+
+    //Funções de interação com a Model
 }
