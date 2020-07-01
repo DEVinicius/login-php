@@ -13,7 +13,7 @@ $router->group(null);
 $router->get("/", "WebController:index");
 $router->get("/signUp", "WebController:signUp");
 $router->post("/", "WebController:login");
-$router->post("/sign_up", "WebContoller:create");
+$router->post("/signUp", "WebController:create");
 
 // Rotas de erro
 $router->group("ooops");

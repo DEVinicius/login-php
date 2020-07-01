@@ -33,4 +33,7 @@ class WebController{
     }
 
     //Funções de interação com a Model
+    public function create($data){
+        var_dump($data);
+    }
 }
