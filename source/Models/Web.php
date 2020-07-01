@@ -32,17 +32,14 @@ class Web {
         $query->execute();
     }
 
-    public function verify(string $email):bool{
+    public function verify(string $email){
         $query = $this->conn->prepare("SELECT * FROM {$this->table_name} WHERE email = ?");
         $query->bindParam(1, $email, PDO::PARAM_STR);
 
         $query->execute();
 
         $result = $query->fetch(PDO::FETCH_ASSOC);
-        if($result == null){
-            return false;
-        }
-
-        return true;
+        
+        return $result;
     }
 }

@@ -4,7 +4,7 @@
     ]);
 ?>
 
-<form action="#" method="post">
+<form action="<?= url("login") ?>" method="post">
     <div id="email">
         <label for="email">E-mail</label>
         <input type="email" placeholder="E-mail" name="email" id="email_input">
@@ -20,5 +20,13 @@
 
     <div id="cadastro">
         <a href="<?= url("signUp")?>">Cadastrar</a>
-    </div>  
+    </div> 
+    
+    <?php 
+        if(!$this->e($warning) == null):
+    ?>
+        <h4><?= $this->e($warning) ?></h4>
+    <?php 
+        endif
+    ?> 
 </form>

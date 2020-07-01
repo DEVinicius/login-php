@@ -16,7 +16,8 @@ class WebController{
 
     public function index(): void{
         echo $this->view->render("login", [
-            "title" => "Login"
+            "title" => "Login",
+            "warning" => null
         ]);
     }
 
@@ -29,7 +30,8 @@ class WebController{
 
     public function signUp():void{
         echo $this->view->render("sign_up",[
-            "title" => "Cadastro"
+            "title" => "Cadastro",
+            "warning" => null
         ]);
     }
 
@@ -37,12 +39,12 @@ class WebController{
     public function create($data){
         $web = new Web();
         //criptografar a senha
-        if(!$web->verify($data['email'])){
+        if(null !== $web->verify($data['email'])){
             $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
             $web->setUser($data['name'], $data['email'], $data['password']);
             $web->create();
 
-            echo $this->view->render("sign_up",[
+            echo $this->view->render("login",[
                 "title" => "Cadastro",
                 "warning" => null
             ]);
@@ -51,6 +53,27 @@ class WebController{
             echo $this->view->render("sign_up",[
                 "title" => "Cadastro",
                 "warning" => "Usuario já existente"
+            ]);
+        }
+    }
+
+    public function login($data){
+        $web = new Web();
+        $verify = $web->verify($data['email']);
+
+        if($data['email'] == $verify['email'] && password_verify($data['password'],$verify['passwd'])){
+            session_start();
+            $_SESSION['name'] = $verify['name'];
+            $_SESSION['email'] = $verify['email'];
+
+            echo $this->view->render("home",[
+                "title" => "Home"
+            ]);
+        }
+        else{
+            echo $this->view->render("login",[
+                "title" => "Cadastro",
+                "warning" => "Usuario ou Senha incorretos"
             ]);
         }
     }
