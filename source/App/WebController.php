@@ -37,8 +37,21 @@ class WebController{
     public function create($data){
         $web = new Web();
         //criptografar a senha
-        $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
-        $web->setUser($data['name'], $data['email'], $data['password']);
-        $web->create();
+        if(!$web->verify($data['email'])){
+            $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
+            $web->setUser($data['name'], $data['email'], $data['password']);
+            $web->create();
+
+            echo $this->view->render("sign_up",[
+                "title" => "Cadastro",
+                "warning" => null
+            ]);
+        }
+        else{
+            echo $this->view->render("sign_up",[
+                "title" => "Cadastro",
+                "warning" => "Usuario já existente"
+            ]);
+        }
     }
 }

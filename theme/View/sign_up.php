@@ -5,6 +5,7 @@
 ?>
 
 <form action="<?= url("signUp")?>" method="post">
+
     <div id="name">
         <label for="name">Name</label>
         <input type="text" name="name">
@@ -21,4 +22,11 @@
     </div>
 
     <input type="submit" id= "btn_sign_up" class="send" value="Cadastrar">
+    <?php 
+        if(!$this->e($warning) == null):
+    ?>
+        <h4><?= $this->e($warning) ?></h4>
+    <?php 
+        endif
+    ?>
 </form>
