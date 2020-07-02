@@ -5,8 +5,8 @@
     define("DATABASE", [
         "host" => "localhost",
         "dbName" => "login",
-        "password" => "Ralph@2411",
-        "user" => "vini"
+        "password" => "xxxx",
+        "user" => "xxx"
     ]);
 
     function url(string $uri = null) : string{
